@@ -4,8 +4,11 @@ import { Light } from './Light';
 export const TrafficLight = () => {
   const [selectedLight, setSelectedLight] = useState(0);
 
+  console.log(selectedLight);
+  
+
   return (
-    <div className="d-flex justify-content-center align-items-center vh-100 bg-light">
+    <div className="d-flex flex-column justify-content-center align-items-center vh-100 bg-light">
       <div className="position-relative bg-dark rounded-4 p-3 shadow d-flex flex-column align-items-center gap-3" style={{ width: '140px' }}>
 
         <Light 
@@ -26,8 +29,11 @@ export const TrafficLight = () => {
           selectedLight={selectedLight} 
           onClick={() => setSelectedLight(selectedLight === 3 ? 0 : 3)} 
         />
-        
+
       </div>
+        {/* button to change color *challenge 1* */}
+        <button onClick={() => setSelectedLight(selectedLight === 2 ? 3 : selectedLight === 1 ? 2 : 1)} className="mt-3">Change Light Color</button>
+
     </div>
   );
 };
