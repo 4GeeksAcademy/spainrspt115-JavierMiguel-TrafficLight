@@ -9,3 +9,7 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+
+.selected {
+  box-shadow: 0 0 20px 8px rgba(255, 255, 255, 0.5);
+}
